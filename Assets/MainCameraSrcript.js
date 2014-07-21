@@ -4,7 +4,6 @@
 private var box:GameObject;
 private var moveSpeed:float = 10.0f;
 
-
 function Start () {
 	// 씬에 있는거 
 	box = GameObject.Find("Cube");
@@ -41,7 +40,16 @@ function OnGUI()
 		sphere.transform.position = box.transform.position;
 		sphere.transform.localScale = Vector3(0.3, 0.3, 0.3);
 		
+		var sc : SphereCollider;
 		sphere.AddComponent("BulletScript");
+		sc = sphere.AddComponent(SphereCollider);
+		sc.center = Vector3(0,0,0);
+		sc.radius = 0.5;
+		sc.isTrigger = true;
+		
+		var rb : Rigidbody;
+		rb = sphere.AddComponent(Rigidbody);
+		rb.useGravity = false;
 	}	
 	
 }

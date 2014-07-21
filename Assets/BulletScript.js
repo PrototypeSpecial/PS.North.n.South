@@ -13,3 +13,8 @@ function Update () {
 		Destroy(this.gameObject);
 	}
 }
+
+function OnTriggerEnter (other : Collider) 
+{
+	Destroy(this.gameObject);
+}
