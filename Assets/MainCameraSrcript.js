@@ -13,7 +13,7 @@ function Start () {
 function OnGUI()
 {
 	// Left
-	if(GUI.RepeatButton(Rect(10,270,50,30),"<"))
+	if(GUI.RepeatButton(Rect(10,470,150,130),"<"))
 	{
 		if( box.transform.position.x < -10 )
 		{
@@ -23,7 +23,7 @@ function OnGUI()
 	}
 		
 	// Right
-	if(GUI.RepeatButton(Rect(100,270,50,30),">"))
+	if(GUI.RepeatButton(Rect(200,470,150,130),">"))
 	{
 		if( box.transform.position.x > 10 )
 		{
@@ -33,7 +33,7 @@ function OnGUI()
 	}
 	
 	// Fire
-	if(GUI.Button(Rect(170,270,50,30),"^"))
+	if(GUI.Button(Rect(470,470,150,130),"^"))
 	{
 		// 동적 생성
 		var sphere : GameObject = GameObject.CreatePrimitive(PrimitiveType.Sphere);
