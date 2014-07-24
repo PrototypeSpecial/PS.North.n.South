@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
+//2D 스프라이트 제래네이터 코드?
 
 [ExecuteInEditMode]
 public class Sprite : MonoBehaviour {
