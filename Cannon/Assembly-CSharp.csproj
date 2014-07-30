@@ -46,6 +46,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\BallExplode.cs" />
+     <Compile Include="Assets\HealPoint.cs" />
      <Compile Include="Assets\LeftRightMove.cs" />
      <Compile Include="Assets\Shoot.cs" />
      <Compile Include="Assets\Sprite.cs" />
