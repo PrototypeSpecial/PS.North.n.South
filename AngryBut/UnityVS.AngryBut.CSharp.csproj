@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Basic_Move.cs" />
     <Compile Include="Assets\Scripts\Move.cs" />
+    <Compile Include="Assets\Scripts\Player_Ctrl.cs" />
     <None Include="Assets\AngryBots\Resources\BlurPassesForDof.shader" />
     <None Include="Assets\AngryBots\Resources\ColoredNoise.shader" />
     <None Include="Assets\AngryBots\Resources\HeightDepthOfField.shader" />
