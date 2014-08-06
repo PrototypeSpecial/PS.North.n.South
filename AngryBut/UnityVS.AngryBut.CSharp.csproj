@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E2C48C6E-98EB-C81A-FB65-5647A80C9A42}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace></RootNamespace>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+    <CompilerResponseFile></CompilerResponseFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Debug\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>DEBUG;TRACE;UNITY_4_5_2;UNITY_4_5;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>TRACE;UNITY_4_5_2;UNITY_4_5;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="Boo.Lang" />
+    <Reference Include="UnityScript.Lang" />
+    <Reference Include="UnityEngine">
+      <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Scripts\Basic_Move.cs" />
+    <Compile Include="Assets\Scripts\Move.cs" />
+    <None Include="Assets\AngryBots\Resources\BlurPassesForDof.shader" />
+    <None Include="Assets\AngryBots\Resources\ColoredNoise.shader" />
+    <None Include="Assets\AngryBots\Resources\HeightDepthOfField.shader" />
+    <None Include="Assets\AngryBots\Resources\MobileBloom.shader" />
+    <None Include="Assets\AngryBots\Shaders\BackgroundAndCharacters\AlphaCutoutCheapFallback.shader" />
+    <None Include="Assets\AngryBots\Shaders\BackgroundAndCharacters\AngryInclude.cginc" />
+    <None Include="Assets\AngryBots\Shaders\BackgroundAndCharacters\CharacterSelfIlluminationReflective.shader" />
+    <None Include="Assets\AngryBots\Shaders\BackgroundAndCharacters\EnemySelfIlluminationReflective.shader" />
+    <None Include="Assets\AngryBots\Shaders\BackgroundAndCharacters\Fallback.shader" />
+    <None Include="Assets\AngryBots\Shaders\BackgroundAndCharacters\PlanarRealtimeReflection.shader" />
+    <None Include="Assets\AngryBots\Shaders\BackgroundAndCharacters\RealtimeReflectionInWaterFlow.shader" />
+    <None Include="Assets\AngryBots\Shaders\BackgroundAndCharacters\RealtimeReflectionReplacement.shader" />
+    <None Include="Assets\AngryBots\Shaders\BackgroundAndCharacters\ReflectiveBackgroundArbitrary.shader" />
+    <None Include="Assets\AngryBots\Shaders\BackgroundAndCharacters\ReflectiveBackgroundPlanar.shader" />
+    <None Include="Assets\AngryBots\Shaders\BackgroundAndCharacters\ReflectiveBackgroundSelfIllumination.shader" />
+    <None Include="Assets\AngryBots\Shaders\BackgroundAndCharacters\SuperSimpleSelfIllumination.shader" />
+    <None Include="Assets\AngryBots\Shaders\Fx\Additive.shader" />
+    <None Include="Assets\AngryBots\Shaders\Fx\AdditiveBlend.shader" />
+    <None Include="Assets\AngryBots\Shaders\Fx\Blend.shader" />
+    <None Include="Assets\AngryBots\Shaders\Fx\Cursor.shader" />
+    <None Include="Assets\AngryBots\Shaders\Fx\HeightFogBeforeTransparent.shader" />
+    <None Include="Assets\AngryBots\Shaders\Fx\InterlacePatternAdditive.shader" />
+    <None Include="Assets\AngryBots\Shaders\Fx\InterlacePatternBlend.shader" />
+    <None Include="Assets\AngryBots\Shaders\Fx\LaserScope.shader" />
+    <None Include="Assets\AngryBots\Shaders\Fx\Multiply.shader" />
+    <None Include="Assets\AngryBots\Shaders\Fx\ParticleAdditive.shader" />
+    <None Include="Assets\AngryBots\Shaders\Fx\ParticleAdditiveBlend.shader" />
+    <None Include="Assets\AngryBots\Shaders\Fx\ParticleBlend.shader" />
+    <None Include="Assets\AngryBots\Shaders\Fx\ParticleMultiply.shader" />
+    <None Include="Assets\AngryBots\Shaders\Fx\Rain.shader" />
+    <None Include="Assets\AngryBots\Shaders\Fx\RainSplash.shader" />
+    <None Include="Assets\AngryBots\Shaders\Fx\ScreenRefract.shader" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />
+</Project>
