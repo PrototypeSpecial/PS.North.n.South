@@ -34,24 +34,28 @@ public class Player_Ctrl : MonoBehaviour {
         float xx = Input.GetAxisRaw("Vertical");
         float zz = Input.GetAxisRaw("Horizontal");
 
-        if( Input.GetKey(KeyCode.LeftArrow)||Input.GetKey(KeyCode.RightArrow)||
-            Input.GetKey(KeyCode.UpArrow)||Input.GetKey(KeyCode.DownArrow))
-        {
-            lookDirection = xx * Vector3.forward + zz * Vector3.right;
-            Speed = WalkSpeed;
-            PS = PlayerState.Walk;
-            if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift) )
-            {
-                Speed = RunSpeed;
-                PS = PlayerState.Run;
-            }
-        }
+		if (PS != PlayerState.Attack) {
 
-        if(xx==0 && zz==0 && PS != PlayerState.Idle)
-        {
-            PS=PlayerState.Idle;
-            Speed=0f;
-        }
+						if (Input.GetKey (KeyCode.LeftArrow) || Input.GetKey (KeyCode.RightArrow) ||
+								Input.GetKey (KeyCode.UpArrow) || Input.GetKey (KeyCode.DownArrow)) {
+								lookDirection = xx * Vector3.forward + zz * Vector3.right;
+								Speed = WalkSpeed;
+								PS = PlayerState.Walk;
+								if (Input.GetKey (KeyCode.LeftShift) || Input.GetKey (KeyCode.RightShift)) {
+										Speed = RunSpeed;
+										PS = PlayerState.Run;
+								}
+						}
+
+						if (xx == 0 && zz == 0 && PS != PlayerState.Idle) {
+								PS = PlayerState.Idle;
+								Speed = 0f;
+						}
+				}
+		if (Input.GetKeyDown (KeyCode.Space) && PS != PlayerState.Dead) 
+		{
+			StartCoroutine ("Shot");
+		}
     }
 
     void LookUpdate()
@@ -91,4 +95,25 @@ public class Player_Ctrl : MonoBehaviour {
             animation.CrossFade(Idle_Ani.name, 0.2f);
         }
     }
+	public IEnumerator Shot() {
+		GameObject bullet = Instantiate(Bullet,
+		                                ShotPoint.position,
+		                                Quaternion.LookRotation(ShotPoint.forward)) as GameObject;
+
+		Physics.IgnoreCollision (bullet.collider, collider);
+
+
+		audio.clip = ShotSound;
+		audio.Play ();
+
+		ShotFX.SetActive(true);
+
+		PS = PlayerState.Attack;
+		Speed = 0f;
+		yield return new WaitForSeconds(0.15f);
+		ShotFX.SetActive(false);
+
+		yield return new WaitForSeconds(0.15f);
+		PS = PlayerState.Idle;
+	}
 }

@@ -49,8 +49,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Basic_Move.cs" />
+    <Compile Include="Assets\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Scripts\GunFX.cs" />
+    <Compile Include="Assets\Scripts\Mouse_Ctrl.cs" />
     <Compile Include="Assets\Scripts\Move.cs" />
     <Compile Include="Assets\Scripts\Player_Ctrl.cs" />
+    <Compile Include="Assets\Scripts\RotateSelf.cs" />
     <None Include="Assets\AngryBots\Resources\BlurPassesForDof.shader" />
     <None Include="Assets\AngryBots\Resources\ColoredNoise.shader" />
     <None Include="Assets\AngryBots\Resources\HeightDepthOfField.shader" />
