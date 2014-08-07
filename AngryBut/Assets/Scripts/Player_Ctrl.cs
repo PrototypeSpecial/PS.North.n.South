@@ -24,6 +24,11 @@ public class Player_Ctrl : MonoBehaviour {
     public AnimationClip Walk_Ani;
     public AnimationClip Run_Ani;
 
+	public GameObject Bullet;
+	public Transform ShotPoint;
+	public GameObject ShotFX;
+	public AudioClip ShotSound;
+
     void KeyboardInput()
     {
         float xx = Input.GetAxisRaw("Vertical");
