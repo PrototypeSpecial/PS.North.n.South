@@ -29,6 +29,10 @@ public class Player_Ctrl : MonoBehaviour {
 	public GameObject ShotFX;
 	public AudioClip ShotSound;
 
+    public UISlider LifeBar;
+    public float Max_hp = 100;
+    public float hp = 100;
+
     void KeyboardInput()
     {
         float xx = Input.GetAxisRaw("Vertical");
@@ -71,8 +75,11 @@ public class Player_Ctrl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        KeyboardInput();
-        LookUpdate();
+        if (PS != PlayerState.Dead)
+        {
+            KeyboardInput();
+            LookUpdate();
+        }
         AnimationUpdate();
 	}
 
@@ -116,4 +123,23 @@ public class Player_Ctrl : MonoBehaviour {
 		yield return new WaitForSeconds(0.15f);
 		PS = PlayerState.Idle;
 	}
+
+    public void Hurt(float damage)
+    {
+        if(hp > 0)
+        {
+            hp -= damage;
+            LifeBar.sliderValue = hp / Max_hp;
+        }
+
+        if(hp < 0)
+        {
+            Speed = 0f;
+            PS = PlayerState.Dead;
+
+            PlayManager PM = GameObject.Find("PlayManager").GetComponent<PlayManager>();
+            PM.GameOver();
+        }
+
+    }
 }
